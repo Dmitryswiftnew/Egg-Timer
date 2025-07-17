@@ -1,24 +1,145 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Egg_Timer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wU5-wM-iLR">
+                                <rect key="frame" x="141.66666666666666" y="399" width="107" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="107" id="5Ua-qe-CRO"/>
+                                    <constraint firstAttribute="height" constant="55" id="VtO-ah-cMm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0se-oF-8vg">
+                                <rect key="frame" x="156.66666666666666" y="613" width="76.666666666666657" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="u4I-8r-nRa"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="play" title=""/>
+                                <connections>
+                                    <action selector="startBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AjH-DX-mM2"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="62" translatesAutoresizingMaskIntoConstraints="NO" id="IXb-WM-cGY">
+                                <rect key="frame" x="25" y="167" width="340" height="174"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="38" translatesAutoresizingMaskIntoConstraints="NO" id="Mwu-yD-fBe">
+                                        <rect key="frame" x="0.0" y="0.0" width="340" height="90"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4fK-yx-PGk">
+                                                <rect key="frame" x="0.0" y="0.0" width="88" height="90"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="90" id="XFW-TV-Pya"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="egg" title=""/>
+                                                <connections>
+                                                    <action selector="softBoildBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DUI-9u-8Za"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wzb-6t-6Ow">
+                                                <rect key="frame" x="126" y="0.0" width="88" height="90"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="90" id="Gdu-Un-LFF"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="egg" title=""/>
+                                                <connections>
+                                                    <action selector="inAPouchBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SM2-1a-bh3"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CqU-Wg-OAa">
+                                                <rect key="frame" x="252" y="0.0" width="88" height="90"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="90" id="ldu-Gi-1lP"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="egg" title=""/>
+                                                <connections>
+                                                    <action selector="hardBoildBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pHG-Xt-iWZ"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="45" translatesAutoresizingMaskIntoConstraints="NO" id="R8Z-vr-obA">
+                                        <rect key="frame" x="0.0" y="152" width="340" height="22"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Soft-boiled" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vtW-FD-BE8">
+                                                <rect key="frame" x="0.0" y="0.0" width="95.333333333333329" height="22"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="22" id="aqu-Cd-gqk"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="16"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="In a pouch" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j14-Do-4wT">
+                                                <rect key="frame" x="140.33333333333334" y="0.0" width="76.666666666666657" height="22"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="16"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Hard boild" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="59x-xb-wC6">
+                                                <rect key="frame" x="262" y="0.0" width="78" height="22"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="22" id="Vab-Ad-0kW"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="16"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="IXb-WM-cGY" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="120" id="Aeh-oL-Hc0"/>
+                            <constraint firstItem="0se-oF-8vg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="156.66666666666666" id="SYp-fO-m2z"/>
+                            <constraint firstItem="IXb-WM-cGY" firstAttribute="centerX" secondItem="wU5-wM-iLR" secondAttribute="centerX" id="T1c-gy-YDd"/>
+                            <constraint firstItem="IXb-WM-cGY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="U31-3e-e1H"/>
+                            <constraint firstItem="wU5-wM-iLR" firstAttribute="centerX" secondItem="0se-oF-8vg" secondAttribute="centerX" id="iQa-ar-dpP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="0se-oF-8vg" secondAttribute="bottom" constant="147" id="kKV-WV-ken"/>
+                            <constraint firstItem="wU5-wM-iLR" firstAttribute="top" secondItem="IXb-WM-cGY" secondAttribute="bottom" constant="58" id="uTL-gd-9k8"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="hardBoildBtn" destination="CqU-Wg-OAa" id="OuU-n9-Nc9"/>
+                        <outlet property="inAPouchBtn" destination="Wzb-6t-6Ow" id="yP4-Xv-rOt"/>
+                        <outlet property="softBoildBtn" destination="4fK-yx-PGk" id="n5f-Ag-L3F"/>
+                        <outlet property="startBtn" destination="0se-oF-8vg" id="SwI-Zf-MCr"/>
+                        <outlet property="timerLabel" destination="wU5-wM-iLR" id="njr-2I-vf6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="96.946564885496173" y="3.5211267605633805"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="egg" width="64" height="64"/>
+        <image name="play" width="64" height="64"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
